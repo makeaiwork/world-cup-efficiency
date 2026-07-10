@@ -1788,8 +1788,11 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;div class=&quot;guide-grid&quot;&gt;
       &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Поиск и фильтры&lt;/strong&gt;&lt;span&gt;Ищите по имени или клубу, затем ограничивайте список сборной и амплуа.&lt;/span&gt;&lt;/div&gt;
       &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Сортировка&lt;/strong&gt;&lt;span&gt;Нажимайте заголовки «Сборная», «Клуб», «Амплуа», «Статистика», Eff. или «Стоимость» либо используйте общий список.&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Статистика&lt;/strong&gt;&lt;span&gt;Сортировка сравнивает игроков внутри амплуа: полевых — по голам, передачам, стартам и минутам; вратарей — по сейвам, сухим матчам, пропущенным и стартам.&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Eff.&lt;/strong&gt;&lt;span&gt;Позиционный индекс 0–100 с учётом игрового времени, результативности, дисциплины и вратарских действий.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Сортировка «Статистика»&lt;/strong&gt;&lt;span&gt;Для полевых игроков: голы × 7 + ассисты × 5 + старты × 0,75 + минуты ÷ 180 − жёлтые × 0,35 − красные × 2,5. Итог нормализуется до 0–100 отдельно внутри каждого амплуа.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Пример: Килиан Мбаппе&lt;/strong&gt;&lt;span&gt;8 голов × 7 + 3 ассиста × 5 + 6 стартов × 0,75 + 518 минут ÷ 180 = 78,4 балла. Это максимум среди нападающих — нормализованный результат 100.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Пример: Майкл Олисе&lt;/strong&gt;&lt;span&gt;0 голов × 7 + 6 ассистов × 5 + 6 стартов × 0,75 + 488 минут ÷ 180 = 37,2 балла. Относительно максимума полузащитников 38,65 это 96,3 из 100.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Вратари&lt;/strong&gt;&lt;span&gt;Сейвы × 1,2 + сухие матчи × 6 − пропущенные × 1,25 + старты × 0,8 + минуты ÷ 180. Их результат также нормализуется только среди вратарей.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Eff.&lt;/strong&gt;&lt;span&gt;Готовый позиционный индекс из исходного набора данных. Точные веса его формулы не опубликованы, поэтому Eff. игроков разных амплуа нельзя считать прямым сравнением. Для прозрачного рейтинга используйте сортировку «Статистика».&lt;/span&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/details&gt;
 
@@ -2005,14 +2008,13 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   function renderTeams() {
     var rows = statusFilteredTeams().sort(function (a, b) {
-      var aActive = a.tournamentStatus === &quot;active&quot; ? 1 : 0;
-      var bActive = b.tournamentStatus === &quot;active&quot; ? 1 : 0;
       if (state.teamSort === &quot;tournamentStatus&quot;) {
+        var aActive = a.tournamentStatus === &quot;active&quot; ? 1 : 0;
+        var bActive = b.tournamentStatus === &quot;active&quot; ? 1 : 0;
         if (aActive !== bActive) return state.teamDirection * (aActive - bActive);
         if (a.stageCode !== b.stageCode) return b.stageCode - a.stageCode;
         return b.valueIndex - a.valueIndex;
       }
-      if (aActive !== bActive) return bActive - aActive;
       var av = a[state.teamSort];
       var bv = b[state.teamSort];
       if (typeof av === &quot;string&quot;) return state.teamDirection * av.localeCompare(bv, &quot;ru&quot;);
