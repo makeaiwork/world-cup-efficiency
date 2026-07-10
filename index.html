@@ -1239,6 +1239,22 @@ html&gt;body{padding:0}&lt;/style&gt;
 #wc26-efficiency .status-legend {
   color: var(--wc-muted);
 }
+#wc26-efficiency .status-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+#wc26-efficiency .status-legend-flag {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: saturate(1.08);
+}
+#wc26-efficiency .status-legend-flag.is-eliminated {
+  opacity: .3;
+  filter: grayscale(.92) saturate(.25);
+}
 #wc26-efficiency .status-mark.is-active {
   color: var(--wc-accent);
 }
@@ -1698,8 +1714,8 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   &lt;div class=&quot;section-label&quot;&gt;Стоимость игроков × индекс эффективности&lt;/div&gt;
   &lt;div class=&quot;status-legend text-small text-muted&quot; aria-label=&quot;Статус команд&quot;&gt;
-    &lt;span&gt;&lt;span class=&quot;status-mark is-active&quot;&gt;●&lt;/span&gt; В турнире&lt;/span&gt;
-    &lt;span&gt;&lt;span class=&quot;status-mark is-eliminated&quot;&gt;✕&lt;/span&gt; Вылетели&lt;/span&gt;
+    &lt;span class=&quot;status-legend-item&quot;&gt;&lt;img class=&quot;status-legend-flag&quot; src=&quot;https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e6-1f1f7.svg&quot; alt=&quot;&quot; decoding=&quot;async&quot;&gt; В турнире&lt;/span&gt;
+    &lt;span class=&quot;status-legend-item&quot;&gt;&lt;img class=&quot;status-legend-flag is-eliminated&quot; src=&quot;https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fa-1f1f8.svg&quot; alt=&quot;&quot; decoding=&quot;async&quot;&gt; Вылетели&lt;/span&gt;
   &lt;/div&gt;
   &lt;div class=&quot;scatter-wrap&quot; id=&quot;wc-scatter-wrap&quot;&gt;
     &lt;svg class=&quot;scatter&quot; id=&quot;wc-scatter&quot; viewBox=&quot;0 0 680 380&quot; role=&quot;img&quot; aria-labelledby=&quot;wc-scatter-title wc-scatter-desc&quot;&gt;
