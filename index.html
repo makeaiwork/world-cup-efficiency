@@ -7,17 +7,17 @@
 <meta name="description" content="Интерактивный рейтинг сборных и игроков чемпионата мира 2026: стоимость состава, спортивная эффективность и турнирный статус.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Эффективность сборных ЧМ-2026</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;max-width:736px;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(238 242 251),rgb(7 11 23))}html,body{margin:0;min-height:100%}body{box-sizing:border-box;padding:24px;background:radial-gradient(circle at 10% 0%,light-dark(rgb(255 205 217 / .74),rgb(126 24 53 / .3)),transparent 34%),radial-gradient(circle at 90% 100%,light-dark(rgb(190 215 255 / .72),rgb(25 61 128 / .34)),transparent 40%),light-dark(rgb(238 242 251),rgb(7 11 23))}iframe{display:block;width:100%;max-width:1180px;height:calc(100vh - 48px);margin:0 auto;border:1px solid light-dark(rgb(18 35 76 / .1),rgb(255 255 255 / .1));border-radius:28px;background:light-dark(rgb(251 252 255),rgb(13 18 34));box-shadow:0 24px 80px light-dark(rgb(20 38 82 / .16),rgb(0 0 0 / .42))}@media(max-width:720px){body{padding:0}iframe{height:100vh;border:0;border-radius:0}}</style>
 </head>
 <body>
-<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="World Cup Bright Help" srcdoc="&lt;!doctype html&gt;
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Эффективность ЧМ-2026" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;World Cup Bright Help&lt;/title&gt;
+&lt;title&gt;Эффективность ЧМ-2026&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(--background) !important;
@@ -1044,6 +1044,473 @@ html&gt;body{padding:0}&lt;/style&gt;
     grid-template-columns: 1fr;
   }
 }
+
+/* Editorial sports dashboard */
+#wc26-efficiency {
+  --wc-ink: light-dark(rgb(17 24 43), rgb(242 245 255));
+  --wc-muted: light-dark(rgb(76 87 113), rgb(158 170 199));
+  --wc-line: light-dark(rgb(24 52 111 / 11%), rgb(255 255 255 / 10%));
+  --wc-surface: light-dark(rgb(244 247 253), rgb(20 27 48));
+  --wc-accent: light-dark(rgb(31 77 184), rgb(104 157 255));
+  --wc-red: light-dark(rgb(210 35 69), rgb(255 91 118));
+  --wc-gold: light-dark(rgb(184 126 15), rgb(255 205 92));
+  min-height: 100%;
+  padding: 34px 38px 28px;
+  color: var(--wc-ink);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--wc-red) 5%, transparent), transparent 30%),
+    linear-gradient(315deg, color-mix(in srgb, var(--wc-accent) 6%, transparent), transparent 36%),
+    light-dark(rgb(251 252 255), rgb(13 18 34));
+}
+#wc26-efficiency .wc-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: end;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--wc-line);
+}
+#wc26-efficiency .wc-brand {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  min-width: 0;
+}
+#wc26-efficiency .wc-mark {
+  display: grid;
+  width: 52px;
+  height: 58px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 17px 17px 17px 5px;
+  color: rgb(255 255 255);
+  background: linear-gradient(145deg, var(--wc-red) 0 47%, var(--wc-accent) 48% 82%, var(--wc-gold) 83% 100%);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--wc-accent) 24%, transparent);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+#wc26-efficiency .wc-kicker {
+  margin: 1px 0 5px;
+  color: var(--wc-accent);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+#wc26-efficiency .wc-hero h1 {
+  max-width: 620px;
+  color: var(--wc-ink);
+  font-size: clamp(28px, 4.2vw, 46px);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: .98;
+}
+#wc26-efficiency .wc-lede {
+  max-width: 680px;
+  margin-top: 12px;
+  color: var(--wc-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+#wc26-efficiency .wc-snapshot {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 18px;
+  padding-bottom: 2px;
+}
+#wc26-efficiency .wc-snapshot div {
+  min-width: 68px;
+}
+#wc26-efficiency .wc-snapshot strong,
+#wc26-efficiency .wc-snapshot span {
+  display: block;
+}
+#wc26-efficiency .wc-snapshot strong {
+  color: var(--wc-ink);
+  font-size: 18px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+#wc26-efficiency .wc-snapshot span {
+  color: var(--wc-muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+#wc26-efficiency .wc-tabs {
+  width: fit-content;
+  margin: 22px 0 18px;
+  padding: 4px;
+  border: 1px solid var(--wc-line);
+  border-radius: 14px;
+  background: var(--wc-surface);
+}
+#wc26-efficiency .wc-tabs .btn {
+  min-height: 34px;
+  padding-inline: 14px;
+  border-color: transparent;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+#wc26-efficiency .wc-tabs .btn[aria-selected=&quot;true&quot;] {
+  border-color: var(--wc-line);
+  color: var(--wc-ink);
+  background: light-dark(rgb(255 255 255), rgb(37 45 41));
+  box-shadow: 0 5px 16px light-dark(rgb(18 44 27 / 8%), rgb(0 0 0 / 22%));
+}
+#wc26-efficiency .viz-controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 20px;
+  padding: 14px;
+  border: 1px solid var(--wc-line);
+  border-radius: 16px;
+  background: var(--wc-surface);
+}
+#wc26-efficiency .viz-controls + .viz-controls {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: -12px;
+}
+#wc26-efficiency #wc-panel-teams &gt; .viz-controls {
+  grid-template-columns: minmax(190px, 1fr) minmax(155px, .7fr) auto;
+}
+#wc26-efficiency .form-label {
+  gap: 6px;
+  color: var(--wc-muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+#wc26-efficiency .form-select,
+#wc26-efficiency .form-control,
+#wc26-efficiency .viz-controls > .btn {
+  min-height: 38px;
+}
+#wc26-efficiency .form-select,
+#wc26-efficiency .form-control {
+  border-color: var(--wc-line);
+  border-radius: 10px;
+  color: var(--wc-ink);
+  background-color: light-dark(rgb(255 255 255), rgb(31 38 34));
+}
+#wc26-efficiency .section-label {
+  margin: 26px 0 3px;
+  color: var(--wc-ink);
+  font-size: 17px;
+  letter-spacing: -.015em;
+}
+#wc26-efficiency .status-legend {
+  color: var(--wc-muted);
+}
+#wc26-efficiency .status-mark.is-active {
+  color: var(--wc-accent);
+}
+#wc26-efficiency .status-mark.is-eliminated {
+  color: var(--wc-red);
+}
+#wc26-efficiency .scatter-wrap {
+  margin: 10px 0 22px;
+  padding: 14px 12px 4px;
+  border-block: 1px solid var(--wc-line);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--wc-accent) 5%, transparent), transparent 62%);
+}
+#wc26-efficiency .scatter .grid-line {
+  stroke: var(--wc-line);
+  opacity: 1;
+}
+#wc26-efficiency .scatter .axis-line {
+  stroke: color-mix(in srgb, var(--wc-muted) 34%, transparent);
+}
+#wc26-efficiency .scatter text {
+  fill: var(--wc-muted);
+}
+#wc26-efficiency .scatter .point {
+  fill: var(--wc-accent);
+  stroke: light-dark(rgb(251 252 255), rgb(13 18 34));
+}
+#wc26-efficiency .scatter .point.is-eliminated {
+  fill: light-dark(rgb(225 230 226), rgb(48 57 52));
+  stroke: var(--wc-muted);
+}
+#wc26-efficiency .scatter .point.is-selected {
+  fill: var(--wc-red);
+  stroke: var(--wc-ink);
+}
+#wc26-efficiency .metric-guide {
+  margin: 0 0 24px;
+  padding: 0 2px;
+  color: var(--wc-muted);
+}
+#wc26-efficiency .metric-guide[open] {
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--wc-surface);
+}
+#wc26-efficiency .team-table,
+#wc26-efficiency .player-table {
+  border-top: 1px solid var(--wc-line);
+}
+#wc26-efficiency .team-head,
+#wc26-efficiency .team-row {
+  grid-template-columns: 28px minmax(145px, 1.15fr) minmax(105px, .78fr) minmax(510px, 4fr);
+}
+#wc26-efficiency .column-sort {
+  display: flex;
+  width: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  margin: -5px 0;
+  padding: 5px 2px;
+  border: 0;
+  border-radius: 6px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-weight: 500;
+  text-align: right;
+  cursor: pointer;
+}
+#wc26-efficiency .column-sort.is-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+#wc26-efficiency .column-sort:hover {
+  color: var(--wc-ink);
+  background: color-mix(in srgb, var(--wc-accent) 8%, transparent);
+}
+#wc26-efficiency .column-sort:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 1px;
+}
+#wc26-efficiency .column-sort.is-active {
+  color: var(--wc-accent);
+}
+#wc26-efficiency .sort-arrow {
+  width: 10px;
+  flex: 0 0 auto;
+  color: var(--wc-muted);
+  font-variant-numeric: tabular-nums;
+}
+#wc26-efficiency .column-sort.is-active .sort-arrow {
+  color: currentColor;
+}
+#wc26-efficiency .team-head,
+#wc26-efficiency .player-head {
+  padding: 11px 10px;
+  color: var(--wc-muted);
+  background: var(--wc-surface);
+  border-bottom-color: var(--wc-line);
+}
+#wc26-efficiency .team-row,
+#wc26-efficiency .player-row {
+  padding: 10px;
+  border-bottom-color: var(--wc-line);
+}
+#wc26-efficiency .team-row:hover,
+#wc26-efficiency .player-row:hover {
+  background: color-mix(in srgb, var(--wc-accent) 5%, transparent);
+}
+#wc26-efficiency .team-row.is-selected {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--wc-accent) 14%, transparent), transparent 78%);
+}
+#wc26-efficiency .team-cell .btn {
+  min-height: 30px;
+  padding-inline: 8px;
+  border-color: transparent;
+  color: var(--wc-ink);
+  background: transparent;
+  box-shadow: none;
+  font-weight: 500;
+}
+#wc26-efficiency .team-cell .btn:hover {
+  background: color-mix(in srgb, var(--wc-accent) 9%, transparent);
+}
+#wc26-efficiency .team-status {
+  color: var(--wc-muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+#wc26-efficiency .team-stage {
+  min-width: 0;
+}
+#wc26-efficiency .team-stage .team-status {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 5px;
+  align-items: center;
+  margin-top: 0;
+}
+#wc26-efficiency .team-stage .status-stage {
+  grid-column: 2;
+  color: var(--wc-ink);
+  font-size: 12px;
+  font-weight: 500;
+}
+#wc26-efficiency .team-sub,
+#wc26-efficiency .player-sub,
+#wc26-efficiency .source-line,
+#wc26-efficiency .text-muted {
+  color: var(--wc-muted);
+}
+#wc26-efficiency .heat-cell {
+  padding: 4px 5px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--wc-accent) 18%, transparent) 0 var(--heat), transparent var(--heat) 100%);
+}
+#wc26-efficiency .team-metrics .metric:nth-child(8),
+#wc26-efficiency .player-sport {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--wc-red) 18%, transparent) 0 var(--heat), transparent var(--heat) 100%);
+}
+#wc26-efficiency .team-metrics .metric:nth-child(9) {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--wc-gold) 22%, transparent) 0 var(--heat), transparent var(--heat) 100%);
+}
+#wc26-efficiency #wc-team-summary {
+  position: relative;
+}
+#wc26-efficiency #wc-team-summary .card:last-of-type {
+  padding-right: 44px;
+}
+#wc26-efficiency .summary-close {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 9px;
+  display: grid;
+  width: 30px;
+  min-height: 30px;
+  padding: 0;
+  place-items: center;
+  border-color: var(--wc-line);
+  border-radius: 999px;
+  color: var(--wc-muted);
+  background: light-dark(rgb(255 255 255 / 88%), rgb(31 39 65 / 90%));
+  box-shadow: none;
+  font-size: 17px;
+}
+#wc26-efficiency .summary-close:hover {
+  color: var(--wc-ink);
+  background: color-mix(in srgb, var(--wc-red) 10%, var(--wc-surface));
+}
+#wc26-efficiency .card {
+  border: 1px solid var(--wc-line);
+  background: var(--wc-surface);
+}
+#wc26-efficiency .source-line {
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top-color: var(--wc-line);
+}
+@media (max-width: 900px) {
+  #wc26-efficiency {
+    padding: 28px 24px 24px;
+  }
+  #wc26-efficiency .wc-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 680px) {
+  #wc26-efficiency {
+    padding: 22px 16px 20px;
+  }
+  #wc26-efficiency .wc-brand {
+    gap: 12px;
+  }
+  #wc26-efficiency .wc-mark {
+    width: 43px;
+    height: 49px;
+    border-radius: 14px 14px 14px 5px;
+    font-size: 17px;
+  }
+  #wc26-efficiency .wc-hero h1 {
+    font-size: 29px;
+  }
+  #wc26-efficiency .wc-lede {
+    font-size: 14px;
+  }
+  #wc26-efficiency .wc-snapshot {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  #wc26-efficiency .wc-snapshot div {
+    min-width: 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--wc-line);
+  }
+  #wc26-efficiency .wc-tabs {
+    width: 100%;
+  }
+  #wc26-efficiency .wc-tabs .btn {
+    flex: 1;
+  }
+  #wc26-efficiency .viz-controls,
+  #wc26-efficiency .viz-controls + .viz-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+  #wc26-efficiency #wc-panel-teams &gt; .viz-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+  #wc26-efficiency .viz-controls .form-label:first-child {
+    grid-column: 1 / -1;
+  }
+  #wc26-efficiency .team-row,
+  #wc26-efficiency .player-row {
+    padding: 12px 4px;
+  }
+  #wc26-efficiency .team-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+  #wc26-efficiency .team-row .rank {
+    grid-row: 1 / 4;
+  }
+  #wc26-efficiency .team-stage {
+    grid-column: 2;
+  }
+  #wc26-efficiency .team-stage .team-status {
+    display: flex;
+    margin-top: 2px;
+  }
+  #wc26-efficiency .team-stage .status-stage {
+    font-size: 11px;
+  }
+  #wc26-efficiency .team-metrics {
+    padding-top: 4px;
+  }
+  #wc26-efficiency .metric:nth-child(3),
+  #wc26-efficiency .metric:nth-child(6),
+  #wc26-efficiency .metric:nth-child(7) {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  #wc26-efficiency .wc-hero h1 {
+    font-size: 26px;
+  }
+  #wc26-efficiency .viz-controls,
+  #wc26-efficiency .viz-controls + .viz-controls {
+    grid-template-columns: 1fr;
+  }
+  #wc26-efficiency #wc-panel-teams &gt; .viz-controls {
+    grid-template-columns: 1fr;
+  }
+  #wc26-efficiency .viz-controls .form-label:first-child {
+    grid-column: auto;
+  }
+  #wc26-efficiency .metric:nth-child(2),
+  #wc26-efficiency .metric:nth-child(4),
+  #wc26-efficiency .metric:nth-child(5) {
+    display: none;
+  }
+  #wc26-efficiency .team-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   #wc26-efficiency .scatter .point,
   #wc26-efficiency .team-row {
@@ -1051,6 +1518,22 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
 }
 &lt;/style&gt;
+
+&lt;header class=&quot;wc-hero&quot;&gt;
+  &lt;div class=&quot;wc-brand&quot;&gt;
+    &lt;div class=&quot;wc-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;span&gt;26&lt;/span&gt;&lt;/div&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;wc-kicker&quot;&gt;World Cup · Data Lab&lt;/div&gt;
+      &lt;h1&gt;Кто играет выше своей цены&lt;/h1&gt;
+      &lt;p class=&quot;wc-lede&quot;&gt;Сравниваем спортивный результат сборных с рыночной стоимостью состава — без шума и репутационных бонусов.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;wc-snapshot&quot; aria-label=&quot;Сводка данных&quot;&gt;
+    &lt;div&gt;&lt;strong&gt;48&lt;/strong&gt;&lt;span&gt;сборных&lt;/span&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;strong&gt;7&lt;/strong&gt;&lt;span&gt;в турнире&lt;/span&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;strong&gt;1 248&lt;/strong&gt;&lt;span&gt;игроков&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
 
 &lt;div class=&quot;wc-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Раздел данных&quot;&gt;
   &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;wc-tab-teams&quot; data-tab=&quot;teams&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;wc-panel-teams&quot;&gt;Сборные&lt;/button&gt;
@@ -1062,7 +1545,9 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;label class=&quot;form-label&quot; for=&quot;wc-team-sort&quot;&gt;Рейтинг
       &lt;select class=&quot;form-select&quot; id=&quot;wc-team-sort&quot;&gt;
         &lt;option value=&quot;valueIndex&quot;&gt;Цена / результат&lt;/option&gt;
-        &lt;option value=&quot;sportIndex&quot;&gt;Спортивный индекс&lt;/option&gt;
+        &lt;option value=&quot;sportIndex&quot;&gt;Индекс эффективности&lt;/option&gt;
+        &lt;option value=&quot;nameRu&quot;&gt;Название сборной&lt;/option&gt;
+        &lt;option value=&quot;stageCode&quot;&gt;Стадия турнира&lt;/option&gt;
         &lt;option value=&quot;squadValue&quot;&gt;Стоимость состава&lt;/option&gt;
         &lt;option value=&quot;goals&quot;&gt;Голы&lt;/option&gt;
         &lt;option value=&quot;shots&quot;&gt;Удары&lt;/option&gt;
@@ -1072,13 +1557,19 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;option value=&quot;possession&quot;&gt;Владение&lt;/option&gt;
       &lt;/select&gt;
     &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;wc-team-status&quot;&gt;Статус
+      &lt;select class=&quot;form-select&quot; id=&quot;wc-team-status&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;Все команды&lt;/option&gt;
+        &lt;option value=&quot;active&quot;&gt;В турнире&lt;/option&gt;
+        &lt;option value=&quot;eliminated&quot;&gt;Вылетели&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
     &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;wc-team-direction&quot; aria-label=&quot;Изменить направление сортировки&quot;&gt;↓ По убыванию&lt;/button&gt;
-    &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;wc-team-clear&quot; disabled&gt;Без выбора&lt;/button&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;viz-grid&quot; id=&quot;wc-team-summary&quot; aria-live=&quot;polite&quot; hidden&gt;&lt;/div&gt;
 
-  &lt;div class=&quot;section-label&quot;&gt;Стоимость состава × спортивный индекс&lt;/div&gt;
+  &lt;div class=&quot;section-label&quot;&gt;Стоимость состава × индекс эффективности&lt;/div&gt;
   &lt;div class=&quot;status-legend text-small text-muted&quot; aria-label=&quot;Статус команд&quot;&gt;
     &lt;span&gt;&lt;span class=&quot;status-mark is-active&quot;&gt;●&lt;/span&gt; В турнире&lt;/span&gt;
     &lt;span&gt;&lt;span class=&quot;status-mark is-eliminated&quot;&gt;✕&lt;/span&gt; Вылетели&lt;/span&gt;
@@ -1086,7 +1577,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;div class=&quot;scatter-wrap&quot; id=&quot;wc-scatter-wrap&quot;&gt;
     &lt;svg class=&quot;scatter&quot; id=&quot;wc-scatter&quot; viewBox=&quot;0 0 680 280&quot; role=&quot;img&quot; aria-labelledby=&quot;wc-scatter-title wc-scatter-desc&quot;&gt;
       &lt;title id=&quot;wc-scatter-title&quot;&gt;Стоимость состава и спортивная эффективность сборных&lt;/title&gt;
-      &lt;desc id=&quot;wc-scatter-desc&quot;&gt;Каждая точка — сборная. Горизонтальная ось показывает суммарную рыночную стоимость игроков, вертикальная — спортивный индекс.&lt;/desc&gt;
+      &lt;desc id=&quot;wc-scatter-desc&quot;&gt;Каждая точка — сборная. Горизонтальная ось показывает суммарную рыночную стоимость игроков, вертикальная — индекс эффективности.&lt;/desc&gt;
     &lt;/svg&gt;
     &lt;div class=&quot;tooltip text-small&quot; id=&quot;wc-scatter-tip&quot; hidden&gt;&lt;/div&gt;
   &lt;/div&gt;
@@ -1100,18 +1591,27 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Реализация&lt;/strong&gt;&lt;span&gt;Доля ударов, завершившихся голом: голы ÷ все удары.&lt;/span&gt;&lt;/div&gt;
       &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Пас&lt;/strong&gt;&lt;span&gt;Средняя точность передач команды по доступным матчевым отчётам FIFA.&lt;/span&gt;&lt;/div&gt;
       &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Владение&lt;/strong&gt;&lt;span&gt;Средняя доля времени с мячом во всех сыгранных матчах.&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Спортивный индекс&lt;/strong&gt;&lt;span&gt;Оценка 0–100: голы за матч 30%, реализация 25%, удары в створ 15%, точность паса 20%, владение 10%.&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;€-индекс&lt;/strong&gt;&lt;span&gt;Цена результата 0–100: 70% — результат выше ожиданий для стоимости состава, 30% — спортивный индекс.&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Спорт игрока&lt;/strong&gt;&lt;span&gt;Позиционный рейтинг 0–100 по минутам, стартам, голам, ассистам и дисциплине; у вратарей — также сейвы и сухие матчи.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Индекс эффективности&lt;/strong&gt;&lt;span&gt;Оценка 0–100: голы за матч 30%, реализация 25%, удары в створ 15%, точность паса 20%, владение 10%.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;€-индекс&lt;/strong&gt;&lt;span&gt;Цена результата 0–100: 70% — результат выше ожиданий для стоимости состава, 30% — индекс эффективности.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;guide-item&quot;&gt;&lt;strong&gt;Эффективность игрока&lt;/strong&gt;&lt;span&gt;Позиционный рейтинг 0–100 по минутам, стартам, голам, ассистам и дисциплине; у вратарей — также сейвы и сухие матчи.&lt;/span&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/details&gt;
 
   &lt;div class=&quot;team-table text-small&quot; role=&quot;table&quot; aria-label=&quot;Рейтинг сборных&quot;&gt;
     &lt;div class=&quot;team-head&quot; role=&quot;row&quot;&gt;
       &lt;div role=&quot;columnheader&quot;&gt;#&lt;/div&gt;
-      &lt;div role=&quot;columnheader&quot;&gt;Сборная&lt;/div&gt;
-      &lt;div class=&quot;team-metrics-head&quot; role=&quot;columnheader&quot;&gt;
-        &lt;span data-tooltip=&quot;Суммарная рыночная стоимость 26 игроков; не зарплаты и не сумма контрактов&quot;&gt;Состав&lt;/span&gt;&lt;span data-tooltip=&quot;Голы команды на турнире&quot;&gt;Голы&lt;/span&gt;&lt;span data-tooltip=&quot;Все попытки удара по воротам&quot;&gt;Удары&lt;/span&gt;&lt;span data-tooltip=&quot;Удары в створ ÷ все удары&quot;&gt;В створ&lt;/span&gt;&lt;span data-tooltip=&quot;Голы ÷ все удары&quot;&gt;Реал.&lt;/span&gt;&lt;span data-tooltip=&quot;Средняя точность передач&quot;&gt;Пас&lt;/span&gt;&lt;span data-tooltip=&quot;Средняя доля владения мячом&quot;&gt;Влад.&lt;/span&gt;&lt;span data-tooltip=&quot;Сводная спортивная эффективность 0–100&quot;&gt;Спорт&lt;/span&gt;&lt;span data-tooltip=&quot;Результат с поправкой на стоимость состава, 0–100&quot;&gt;€-инд.&lt;/span&gt;
+      &lt;div role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort is-left&quot; data-team-sort=&quot;nameRu&quot;&gt;&lt;span&gt;Сборная&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;
+      &lt;div role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort is-left&quot; data-team-sort=&quot;stageCode&quot;&gt;&lt;span&gt;Турнир&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;team-metrics-head&quot; role=&quot;presentation&quot;&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;squadValue&quot; data-tooltip=&quot;Суммарная рыночная стоимость 26 игроков; не зарплаты и не сумма контрактов&quot;&gt;&lt;span&gt;Состав&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;goals&quot; data-tooltip=&quot;Голы команды на турнире&quot;&gt;&lt;span&gt;Голы&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;shots&quot; data-tooltip=&quot;Все попытки удара по воротам&quot;&gt;&lt;span&gt;Удары&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;shotAccuracy&quot; data-tooltip=&quot;Удары в створ ÷ все удары&quot;&gt;&lt;span&gt;В створ&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;conversion&quot; data-tooltip=&quot;Голы ÷ все удары&quot;&gt;&lt;span&gt;Реал.&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;passAccuracy&quot; data-tooltip=&quot;Средняя точность передач&quot;&gt;&lt;span&gt;Пас&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;possession&quot; data-tooltip=&quot;Средняя доля владения мячом&quot;&gt;&lt;span&gt;Влад.&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;sportIndex&quot; data-tooltip=&quot;Сводный индекс эффективности 0–100&quot;&gt;&lt;span&gt;Eff.&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span role=&quot;columnheader&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;column-sort&quot; data-team-sort=&quot;valueIndex&quot; data-tooltip=&quot;Результат с поправкой на стоимость состава, 0–100&quot;&gt;&lt;span&gt;€-инд.&lt;/span&gt;&lt;span class=&quot;sort-arrow&quot; aria-hidden=&quot;true&quot;&gt;↕&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div id=&quot;wc-team-list&quot; role=&quot;rowgroup&quot;&gt;&lt;/div&gt;
@@ -1140,7 +1640,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;label class=&quot;form-label&quot; for=&quot;wc-player-sort&quot;&gt;Сортировка
       &lt;select class=&quot;form-select&quot; id=&quot;wc-player-sort&quot;&gt;
         &lt;option value=&quot;value-desc&quot;&gt;Стоимость: сначала дорогие&lt;/option&gt;
-        &lt;option value=&quot;sport-desc&quot;&gt;Спорт: сначала эффективные&lt;/option&gt;
+        &lt;option value=&quot;sport-desc&quot;&gt;Эффективность: сначала лучшие&lt;/option&gt;
         &lt;option value=&quot;value-asc&quot;&gt;Стоимость: сначала дешёвые&lt;/option&gt;
         &lt;option value=&quot;name&quot;&gt;По имени&lt;/option&gt;
         &lt;option value=&quot;age-asc&quot;&gt;Возраст: младшие&lt;/option&gt;
@@ -1154,7 +1654,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;div role=&quot;columnheader&quot;&gt;#&lt;/div&gt;
       &lt;div role=&quot;columnheader&quot;&gt;Игрок&lt;/div&gt;
       &lt;div class=&quot;player-details-head&quot; role=&quot;columnheader&quot;&gt;
-        &lt;span&gt;Сборная&lt;/span&gt;&lt;span&gt;Клуб&lt;/span&gt;&lt;span&gt;Амплуа&lt;/span&gt;&lt;span&gt;Возраст&lt;/span&gt;&lt;span data-tooltip=&quot;Позиционный индекс: минуты, старты, голы, ассисты и дисциплина; для вратарей — сейвы и сухие матчи&quot;&gt;Спорт&lt;/span&gt;&lt;span&gt;Стоимость&lt;/span&gt;
+        &lt;span&gt;Сборная&lt;/span&gt;&lt;span&gt;Клуб&lt;/span&gt;&lt;span&gt;Амплуа&lt;/span&gt;&lt;span&gt;Возраст&lt;/span&gt;&lt;span data-tooltip=&quot;Позиционный индекс: минуты, старты, голы, ассисты и дисциплина; для вратарей — сейвы и сухие матчи&quot;&gt;Eff.&lt;/span&gt;&lt;span&gt;Стоимость&lt;/span&gt;
       &lt;/div&gt;
     &lt;/div&gt;
     &lt;div id=&quot;wc-player-list&quot; role=&quot;rowgroup&quot;&gt;&lt;/div&gt;
@@ -1181,6 +1681,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     tab: &quot;teams&quot;,
     teamSort: &quot;valueIndex&quot;,
     teamDirection: -1,
+    teamStatus: &quot;&quot;,
     selectedTeamId: null,
     playerQuery: &quot;&quot;,
     playerTeam: &quot;&quot;,
@@ -1196,7 +1697,6 @@ html&gt;body{padding:0}&lt;/style&gt;
   var scatterTip = root.querySelector(&quot;#wc-scatter-tip&quot;);
   var playerList = root.querySelector(&quot;#wc-player-list&quot;);
   var playerCount = root.querySelector(&quot;#wc-player-count&quot;);
-  var clearTeamButton = root.querySelector(&quot;#wc-team-clear&quot;);
 
   function esc(value) {
     return String(value == null ? &quot;&quot; : value)
@@ -1227,6 +1727,51 @@ html&gt;body{padding:0}&lt;/style&gt;
     return teams.find(function (team) { return team.id === state.selectedTeamId; }) || null;
   }
 
+  function statusFilteredTeams() {
+    if (!state.teamStatus) return teams.slice();
+    return teams.filter(function (team) { return team.tournamentStatus === state.teamStatus; });
+  }
+
+  function defaultTeamDirection(key) {
+    return key === &quot;nameRu&quot; ? 1 : -1;
+  }
+
+  function updateTeamSortUI() {
+    var sortSelect = root.querySelector(&quot;#wc-team-sort&quot;);
+    var directionButton = root.querySelector(&quot;#wc-team-direction&quot;);
+    sortSelect.value = state.teamSort;
+    directionButton.textContent = state.teamDirection === -1 ? &quot;↓ По убыванию&quot; : &quot;↑ По возрастанию&quot;;
+    root.querySelectorAll(&quot;[data-team-sort]&quot;).forEach(function (button) {
+      var active = button.getAttribute(&quot;data-team-sort&quot;) === state.teamSort;
+      var header = button.closest(&quot;[role=columnheader]&quot;);
+      button.classList.toggle(&quot;is-active&quot;, active);
+      button.querySelector(&quot;.sort-arrow&quot;).textContent = active ? (state.teamDirection === -1 ? &quot;↓&quot; : &quot;↑&quot;) : &quot;↕&quot;;
+      if (header) header.setAttribute(&quot;aria-sort&quot;, active ? (state.teamDirection === -1 ? &quot;descending&quot; : &quot;ascending&quot;) : &quot;none&quot;);
+    });
+  }
+
+  function setTeamSort(key) {
+    if (state.teamSort === key) {
+      state.teamDirection *= -1;
+    } else {
+      state.teamSort = key;
+      state.teamDirection = defaultTeamDirection(key);
+    }
+    renderTeams();
+  }
+
+  var teamMetricMax = {
+    squadValue: Math.max.apply(null, teams.map(function (team) { return team.squadValue; })),
+    goals: Math.max.apply(null, teams.map(function (team) { return team.goals; })),
+    shots: Math.max.apply(null, teams.map(function (team) { return team.shots; }))
+  };
+
+  function metricHeat(key, value) {
+    if (key === &quot;squadValue&quot;) return Math.sqrt(value / teamMetricMax.squadValue) * 100;
+    if (key === &quot;goals&quot; || key === &quot;shots&quot;) return value / teamMetricMax[key] * 100;
+    return value;
+  }
+
   function renderTeamSummary() {
     var team = selectedTeam();
     if (!team) {
@@ -1238,13 +1783,14 @@ html&gt;body{padding:0}&lt;/style&gt;
     var delta = team.valueResidual;
     var deltaText = (delta &gt;= 0 ? &quot;+&quot; : &quot;&quot;) + fmt(delta, 1) + &quot; п. к ожиданию по стоимости&quot;;
     teamSummary.innerHTML =
+      &#x27;&lt;button type=&quot;button&quot; class=&quot;btn summary-close&quot; aria-label=&quot;Снять выбор сборной&quot;&gt;×&lt;/button&gt;&#x27; +
       &#x27;&lt;div class=&quot;card viz-stat&quot;&gt;&#x27; +
         &#x27;&lt;div class=&quot;text-muted&quot;&gt;Выбрана сборная&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;viz-stat-value summary-name&quot;&gt;&lt;span&gt;&#x27; + esc(team.flag) + &#x27;&lt;/span&gt;&lt;span&gt;&#x27; + esc(team.nameRu) + &#x27;&lt;/span&gt;&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;text-small&quot;&gt;&#x27; + money(team.squadValue, false) + &#x27; · &#x27; + team.players + &#x27; игроков · &#x27; + team.games + &#x27; матч.&lt;/div&gt;&#x27; +
       &#x27;&lt;/div&gt;&#x27; +
       &#x27;&lt;div class=&quot;card viz-stat&quot;&gt;&#x27; +
-        &#x27;&lt;div class=&quot;text-muted&quot;&gt;Спортивный индекс&lt;/div&gt;&#x27; +
+        &#x27;&lt;div class=&quot;text-muted&quot;&gt;Индекс эффективности&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;viz-stat-value&quot;&gt;&#x27; + fmt(team.sportIndex, 1) + &#x27;&lt;span class=&quot;text-muted&quot;&gt; / 100&lt;/span&gt;&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;text-small&quot;&gt;&#x27; + fmt(team.goalsPerMatch, 1) + &#x27; гола/матч · пас &#x27; + pct(team.passAccuracy) + &#x27;&lt;/div&gt;&#x27; +
       &#x27;&lt;/div&gt;&#x27; +
@@ -1253,6 +1799,12 @@ html&gt;body{padding:0}&lt;/style&gt;
         &#x27;&lt;div class=&quot;viz-stat-value&quot;&gt;&#x27; + fmt(team.valueIndex, 1) + &#x27;&lt;span class=&quot;text-muted&quot;&gt; / 100&lt;/span&gt;&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;text-small&quot;&gt;&#x27; + esc(deltaText) + &#x27; · &#x27; + money(team.millionPerPoint * 1000000, true) + &#x27; за пункт&lt;/div&gt;&#x27; +
       &#x27;&lt;/div&gt;&#x27;;
+    teamSummary.querySelector(&quot;.summary-close&quot;).addEventListener(&quot;click&quot;, function () {
+      state.selectedTeamId = null;
+      renderTeamSummary();
+      renderTeams();
+      renderScatter();
+    });
   }
 
   function teamMetric(label, value, extraClass, heat) {
@@ -1261,7 +1813,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
 
   function renderTeams() {
-    var rows = teams.slice().sort(function (a, b) {
+    var rows = statusFilteredTeams().sort(function (a, b) {
       var av = a[state.teamSort];
       var bv = b[state.teamSort];
       if (typeof av === &quot;string&quot;) return state.teamDirection * av.localeCompare(bv, &quot;ru&quot;);
@@ -1274,29 +1826,30 @@ html&gt;body{padding:0}&lt;/style&gt;
       var pressed = selected ? &quot;true&quot; : &quot;false&quot;;
       var buttonClass = !hasSelection ? &quot;btn&quot; : (selected ? &quot;btn btn-primary&quot; : &quot;btn btn-ghost&quot;);
       var eliminated = team.tournamentStatus === &quot;eliminated&quot;;
-      var exitStage = eliminated ? team.statusDetail.replace(&quot;Этап: &quot;, &quot;&quot;) : &quot;&quot;;
-      var statusAria = eliminated ? &quot;Вылетела: &quot; + exitStage : &quot;В турнире: &quot; + team.statusLabel;
+      var stageName = eliminated ? team.statusDetail.replace(&quot;Этап: &quot;, &quot;&quot;) : team.statusLabel;
+      var statusText = eliminated ? &quot;Вылетела&quot; : &quot;В турнире&quot;;
+      var statusAria = statusText + &quot;: &quot; + stageName;
       var statusHtml = &#x27;&lt;div class=&quot;team-status&quot; aria-label=&quot;&#x27; + esc(statusAria) + &#x27;&quot;&gt;&#x27; +
         &#x27;&lt;span class=&quot;status-mark &#x27; + (eliminated ? &#x27;is-eliminated&#x27; : &#x27;is-active&#x27;) + &#x27;&quot; aria-hidden=&quot;true&quot;&gt;&#x27; + (eliminated ? &#x27;✕&#x27; : &#x27;●&#x27;) + &#x27;&lt;/span&gt;&#x27; +
-        &#x27;&lt;span&gt;&#x27; + esc(team.statusLabel) + &#x27;&lt;/span&gt;&#x27; +
-        (exitStage ? &#x27;&lt;span class=&quot;status-stage&quot;&gt;· &#x27; + esc(exitStage) + &#x27;&lt;/span&gt;&#x27; : &#x27;&#x27;) +
+        &#x27;&lt;span&gt;&#x27; + esc(statusText) + &#x27;&lt;/span&gt;&#x27; +
+        &#x27;&lt;span class=&quot;status-stage&quot;&gt;&#x27; + esc(stageName) + &#x27;&lt;/span&gt;&#x27; +
       &#x27;&lt;/div&gt;&#x27;;
       return &#x27;&lt;div class=&quot;team-row&#x27; + (selected ? &#x27; is-selected&#x27; : &#x27;&#x27;) + (hasSelection &amp;&amp; !selected ? &#x27; is-dimmed&#x27; : &#x27;&#x27;) + &#x27;&quot; role=&quot;row&quot;&gt;&#x27; +
         &#x27;&lt;div class=&quot;rank num&quot; role=&quot;cell&quot;&gt;&#x27; + (index + 1) + &#x27;&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;team-cell&quot; role=&quot;cell&quot;&gt;&#x27; +
           &#x27;&lt;button type=&quot;button&quot; class=&quot;&#x27; + buttonClass + &#x27;&quot; data-team-id=&quot;&#x27; + team.id + &#x27;&quot; aria-pressed=&quot;&#x27; + pressed + &#x27;&quot;&gt;&#x27; + esc(team.flag + &quot; &quot; + team.nameRu) + &#x27;&lt;/button&gt;&#x27; +
-          statusHtml +
           &#x27;&lt;div class=&quot;team-sub text-muted&quot;&gt;Группа &#x27; + esc(team.group) + &#x27; · &#x27; + team.games + &#x27; матч.&lt;/div&gt;&#x27; +
         &#x27;&lt;/div&gt;&#x27; +
+        &#x27;&lt;div class=&quot;team-stage&quot; role=&quot;cell&quot;&gt;&#x27; + statusHtml + &#x27;&lt;/div&gt;&#x27; +
         &#x27;&lt;div class=&quot;team-metrics&quot; role=&quot;cell&quot;&gt;&#x27; +
-          teamMetric(&quot;Состав&quot;, money(team.squadValue, false)) +
-          teamMetric(&quot;Голы&quot;, fmt(team.goals, 0)) +
-          teamMetric(&quot;Удары&quot;, fmt(team.shots, 0)) +
-          teamMetric(&quot;В створ&quot;, pct(team.shotAccuracy)) +
-          teamMetric(&quot;Реализация&quot;, pct(team.conversion)) +
-          teamMetric(&quot;Пас&quot;, pct(team.passAccuracy)) +
-          teamMetric(&quot;Владение&quot;, pct(team.possession)) +
-          teamMetric(&quot;Спорт&quot;, fmt(team.sportIndex, 1), &quot;index-value heat-cell&quot;, team.sportIndex) +
+          teamMetric(&quot;Состав&quot;, money(team.squadValue, false), &quot;heat-cell&quot;, metricHeat(&quot;squadValue&quot;, team.squadValue)) +
+          teamMetric(&quot;Голы&quot;, fmt(team.goals, 0), &quot;heat-cell&quot;, metricHeat(&quot;goals&quot;, team.goals)) +
+          teamMetric(&quot;Удары&quot;, fmt(team.shots, 0), &quot;heat-cell&quot;, metricHeat(&quot;shots&quot;, team.shots)) +
+          teamMetric(&quot;В створ&quot;, pct(team.shotAccuracy), &quot;heat-cell&quot;, metricHeat(&quot;shotAccuracy&quot;, team.shotAccuracy)) +
+          teamMetric(&quot;Реализация&quot;, pct(team.conversion), &quot;heat-cell&quot;, metricHeat(&quot;conversion&quot;, team.conversion)) +
+          teamMetric(&quot;Пас&quot;, pct(team.passAccuracy), &quot;heat-cell&quot;, metricHeat(&quot;passAccuracy&quot;, team.passAccuracy)) +
+          teamMetric(&quot;Владение&quot;, pct(team.possession), &quot;heat-cell&quot;, metricHeat(&quot;possession&quot;, team.possession)) +
+          teamMetric(&quot;Эффективность&quot;, fmt(team.sportIndex, 1), &quot;index-value heat-cell&quot;, team.sportIndex) +
           teamMetric(&quot;Цена / результат&quot;, fmt(team.valueIndex, 1), &quot;index-value heat-cell&quot;, team.valueIndex) +
         &#x27;&lt;/div&gt;&#x27; +
       &#x27;&lt;/div&gt;&#x27;;
@@ -1310,7 +1863,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         renderScatter();
       });
     });
-    clearTeamButton.disabled = state.selectedTeamId === null;
+    updateTeamSortUI();
   }
 
   function renderScatter() {
@@ -1319,7 +1872,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     scatter.setAttribute(&quot;viewBox&quot;, &quot;0 0 &quot; + width + &quot; &quot; + height);
     scatter.setAttribute(&quot;data-view-width&quot;, String(width));
     var margin = { left: 48, right: 18, top: 18, bottom: 42 };
-    var values = teams.map(function (team) { return team.squadValue / 1000000; });
+    var chartTeams = statusFilteredTeams();
+    var values = chartTeams.map(function (team) { return team.squadValue / 1000000; });
     var minValue = Math.min.apply(null, values);
     var maxValue = Math.max.apply(null, values);
     var logMin = Math.log(minValue * .85);
@@ -1334,8 +1888,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     var xTicks = tickPool.filter(function (v) { return v &gt;= minValue * .8 &amp;&amp; v &lt;= maxValue * 1.15; });
     var yTicks = [0, 20, 40, 60, 80, 100];
     var parts = [
-      &#x27;&lt;title id=&quot;wc-scatter-title&quot;&gt;Стоимость состава и спортивная эффективность сборных&lt;/title&gt;&#x27;,
-      &#x27;&lt;desc id=&quot;wc-scatter-desc&quot;&gt;Каждая точка — сборная. Горизонтальная ось показывает суммарную рыночную стоимость игроков по логарифмической шкале, вертикальная — спортивный индекс.&lt;/desc&gt;&#x27;
+      &#x27;&lt;title id=&quot;wc-scatter-title&quot;&gt;Стоимость состава и индекс эффективности сборных&lt;/title&gt;&#x27;,
+      &#x27;&lt;desc id=&quot;wc-scatter-desc&quot;&gt;Каждая точка — сборная. Горизонтальная ось показывает суммарную рыночную стоимость игроков по логарифмической шкале, вертикальная — индекс эффективности.&lt;/desc&gt;&#x27;
     ];
     yTicks.forEach(function (tick) {
       var y = yScale(tick);
@@ -1350,8 +1904,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     parts.push(&#x27;&lt;line class=&quot;axis-line&quot; x1=&quot;&#x27; + margin.left + &#x27;&quot; y1=&quot;&#x27; + (height - margin.bottom) + &#x27;&quot; x2=&quot;&#x27; + (width - margin.right) + &#x27;&quot; y2=&quot;&#x27; + (height - margin.bottom) + &#x27;&quot;&gt;&lt;/line&gt;&#x27;);
     parts.push(&#x27;&lt;line class=&quot;axis-line&quot; x1=&quot;&#x27; + margin.left + &#x27;&quot; y1=&quot;&#x27; + margin.top + &#x27;&quot; x2=&quot;&#x27; + margin.left + &#x27;&quot; y2=&quot;&#x27; + (height - margin.bottom) + &#x27;&quot;&gt;&lt;/line&gt;&#x27;);
     parts.push(&#x27;&lt;text class=&quot;axis-title text-small&quot; x=&quot;&#x27; + ((margin.left + width - margin.right) / 2) + &#x27;&quot; y=&quot;&#x27; + (height - 7) + &#x27;&quot; text-anchor=&quot;middle&quot;&gt;Стоимость состава, € млн · логарифмическая шкала&lt;/text&gt;&#x27;);
-    parts.push(&#x27;&lt;text class=&quot;axis-title text-small&quot; transform=&quot;translate(13 &#x27; + ((margin.top + height - margin.bottom) / 2) + &#x27;) rotate(-90)&quot; text-anchor=&quot;middle&quot;&gt;Спортивный индекс&lt;/text&gt;&#x27;);
-    teams.forEach(function (team) {
+    parts.push(&#x27;&lt;text class=&quot;axis-title text-small&quot; transform=&quot;translate(13 &#x27; + ((margin.top + height - margin.bottom) / 2) + &#x27;) rotate(-90)&quot; text-anchor=&quot;middle&quot;&gt;Индекс эффективности&lt;/text&gt;&#x27;);
+    chartTeams.forEach(function (team) {
       var selected = team.id === state.selectedTeamId;
       var dimmed = state.selectedTeamId !== null &amp;&amp; !selected;
       var eliminated = team.tournamentStatus === &quot;eliminated&quot;;
@@ -1375,7 +1929,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   function showScatterTip(point, team) {
     var status = team.tournamentStatus === &quot;eliminated&quot; ? &quot;вылетела&quot; : team.statusLabel;
-    scatterTip.innerHTML = &#x27;&lt;strong&gt;&#x27; + esc(team.flag + &quot; &quot; + team.nameRu) + &#x27;&lt;/strong&gt;&lt;br&gt;&#x27; + esc(status) + &#x27; · &#x27; + money(team.squadValue, false) + &#x27; · спорт &#x27; + fmt(team.sportIndex, 1) + &#x27; · €-индекс &#x27; + fmt(team.valueIndex, 1);
+    scatterTip.innerHTML = &#x27;&lt;strong&gt;&#x27; + esc(team.flag + &quot; &quot; + team.nameRu) + &#x27;&lt;/strong&gt;&lt;br&gt;&#x27; + esc(status) + &#x27; · &#x27; + money(team.squadValue, false) + &#x27; · эффективность &#x27; + fmt(team.sportIndex, 1) + &#x27; · €-индекс &#x27; + fmt(team.valueIndex, 1);
     scatterTip.hidden = false;
     scatterTip.style.visibility = &quot;hidden&quot;;
     var svgRect = scatter.getBoundingClientRect();
@@ -1439,7 +1993,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             playerField(&quot;Клуб&quot;, esc(player.club)) +
             playerField(&quot;Амплуа&quot;, esc(player.positionRu)) +
             playerField(&quot;Возраст&quot;, fmt(player.age, 0)) +
-            playerField(&quot;Спорт&quot;, fmt(player.playerSportIndex, 1), &quot;player-sport heat-cell&quot;, player.playerSportIndex) +
+            playerField(&quot;Эффективность&quot;, fmt(player.playerSportIndex, 1), &quot;player-sport heat-cell&quot;, player.playerSportIndex) +
             playerField(&quot;Стоимость&quot;, money(player.value, true), &quot;player-value&quot;) +
           &#x27;&lt;/div&gt;&#x27; +
         &#x27;&lt;/div&gt;&#x27;;
@@ -1472,18 +2026,27 @@ html&gt;body{padding:0}&lt;/style&gt;
   root.querySelectorAll(&quot;[data-tab]&quot;).forEach(function (button) {
     button.addEventListener(&quot;click&quot;, function () { setTab(button.getAttribute(&quot;data-tab&quot;)); });
   });
+  root.querySelectorAll(&quot;[data-team-sort]&quot;).forEach(function (button) {
+    button.addEventListener(&quot;click&quot;, function () {
+      setTeamSort(button.getAttribute(&quot;data-team-sort&quot;));
+    });
+  });
   root.querySelector(&quot;#wc-team-sort&quot;).addEventListener(&quot;change&quot;, function (event) {
     state.teamSort = event.target.value;
+    state.teamDirection = defaultTeamDirection(state.teamSort);
     renderTeams();
   });
   root.querySelector(&quot;#wc-team-direction&quot;).addEventListener(&quot;click&quot;, function (event) {
     state.teamDirection *= -1;
-    event.currentTarget.textContent = state.teamDirection === -1 ? &quot;↓ По убыванию&quot; : &quot;↑ По возрастанию&quot;;
     renderTeams();
   });
-  clearTeamButton.addEventListener(&quot;click&quot;, function () {
-    state.selectedTeamId = null;
-    renderTeamSummary();
+  root.querySelector(&quot;#wc-team-status&quot;).addEventListener(&quot;change&quot;, function (event) {
+    state.teamStatus = event.target.value;
+    var chosen = selectedTeam();
+    if (chosen &amp;&amp; state.teamStatus &amp;&amp; chosen.tournamentStatus !== state.teamStatus) {
+      state.selectedTeamId = null;
+      renderTeamSummary();
+    }
     renderTeams();
     renderScatter();
   });
