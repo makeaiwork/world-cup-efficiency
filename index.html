@@ -2054,7 +2054,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;button type=&quot;button&quot; class=&quot;btn wc-theme-toggle&quot; id=&quot;wc-theme-toggle&quot; aria-label=&quot;Включить тёмную тему&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;☾&lt;/span&gt;&lt;/button&gt;
     &lt;div class=&quot;wc-snapshot&quot; aria-label=&quot;Сводка данных&quot;&gt;
       &lt;div&gt;&lt;strong&gt;48&lt;/strong&gt;&lt;span&gt;сборных&lt;/span&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;strong&gt;6&lt;/strong&gt;&lt;span&gt;в турнире&lt;/span&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;span&gt;в турнире&lt;/span&gt;&lt;/div&gt;
       &lt;div&gt;&lt;strong&gt;1 248&lt;/strong&gt;&lt;span&gt;игроков&lt;/span&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -2229,7 +2229,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/section&gt;
 
 &lt;div class=&quot;source-line text-small text-muted&quot;&gt;
-  Снимок: 11 июля 2026, после Испания 2:1 Бельгия. Стоимость — Transfermarkt; матчевая статистика — официальный протокол FIFA; точность паса — FIFA Training Centre.
+  Снимок: 12 июля 2026, после Норвегия 1:2 Англия (д. в.). Стоимость — Transfermarkt; матчевая статистика — FIFA, ESPN и Opta; точность паса — FIFA Training Centre, ESPN и Opta.
 &lt;/div&gt;
 
 &lt;script&gt;
@@ -2261,6 +2261,8 @@ html&gt;body{padding:0}&lt;/style&gt;
   function updateTeamSnapshot() {
     var spain = teams.find(function (team) { return team.name === &quot;Spain&quot;; });
     var belgium = teams.find(function (team) { return team.name === &quot;Belgium&quot;; });
+    var norway = teams.find(function (team) { return team.name === &quot;Norway&quot;; });
+    var england = teams.find(function (team) { return team.name === &quot;England&quot;; });
 
     Object.assign(spain, {
       games: 6, goals: 11, against: 1, shots: 111, onTarget: 46,
@@ -2275,6 +2277,20 @@ html&gt;body{padding:0}&lt;/style&gt;
       possession: 51.5, passAccuracy: 85.3, reportGames: 6,
       tournamentStatus: &quot;eliminated&quot;, stageCode: 4,
       statusLabel: &quot;Вылетела&quot;, statusDetail: &quot;Этап: 1/4 финала&quot;
+    });
+    Object.assign(norway, {
+      games: 6, goals: 13, against: 11, shots: 63, onTarget: 28,
+      shotAccuracy: 44.4, conversion: 20.6, goalsPerMatch: 2.2,
+      possession: 53.0, passAccuracy: 86.8, reportGames: 6,
+      tournamentStatus: &quot;eliminated&quot;, stageCode: 4,
+      statusLabel: &quot;Вылетела&quot;, statusDetail: &quot;Этап: 1/4 финала&quot;
+    });
+    Object.assign(england, {
+      games: 6, goals: 13, against: 6, shots: 86, onTarget: 40,
+      shotAccuracy: 46.5, conversion: 15.1, goalsPerMatch: 2.2,
+      possession: 53.2, passAccuracy: 88.7, reportGames: 6,
+      tournamentStatus: &quot;active&quot;, stageCode: 5,
+      statusLabel: &quot;Полуфинал&quot;, statusDetail: &quot;В турнире&quot;
     });
 
     teams.forEach(function (team) {
@@ -2315,7 +2331,41 @@ html&gt;body{padding:0}&lt;/style&gt;
       &quot;Axel Witsel&quot;: { minutes: 30, yellow: 1 },
       &quot;Romelu Lukaku&quot;: { minutes: 30 },
       &quot;Joaquin Seys&quot;: { minutes: 30 },
-      &quot;Alexis Saelemaekers&quot;: { minutes: 4 }
+      &quot;Alexis Saelemaekers&quot;: { minutes: 4 },
+      &quot;Ørjan Nyland&quot;: { minutes: 120, start: 1, saves: 6, goalsConceded: 2 },
+      &quot;Torbjørn Heggem&quot;: { minutes: 90, start: 1 },
+      &quot;Kristoffer Ajer&quot;: { minutes: 120, start: 1, yellow: 1 },
+      &quot;David Møller Wolfe&quot;: { minutes: 90, start: 1 },
+      &quot;Julian Ryerson&quot;: { minutes: 60, start: 1 },
+      &quot;Sander Berge&quot;: { minutes: 120, start: 1 },
+      &quot;Patrick Berg&quot;: { minutes: 120, start: 1 },
+      &quot;Martin Ødegaard&quot;: { minutes: 120, start: 1, assists: 1 },
+      &quot;Erling Haaland&quot;: { minutes: 105, start: 1 },
+      &quot;Andreas Schjelderup&quot;: { minutes: 68, start: 1, goals: 1 },
+      &quot;Alexander Sørloth&quot;: { minutes: 68, start: 1 },
+      &quot;Fredrik Aursnes&quot;: { minutes: 60 },
+      &quot;Oscar Bobb&quot;: { minutes: 52 },
+      &quot;Antonio Nusa&quot;: { minutes: 52 },
+      &quot;Marcus Pedersen&quot;: { minutes: 30 },
+      &quot;Leo Østigård&quot;: { minutes: 30 },
+      &quot;Jørgen Strand Larsen&quot;: { minutes: 15 },
+      &quot;Jordan Pickford&quot;: { minutes: 120, start: 1, saves: 3, goalsConceded: 1 },
+      &quot;Marc Guéhi&quot;: { minutes: 120, start: 1 },
+      &quot;John Stones&quot;: { minutes: 120, start: 1 },
+      &quot;Nico O&#x27;Reilly&quot;: { minutes: 86, start: 1 },
+      &quot;Ezri Konsa&quot;: { minutes: 89, start: 1 },
+      &quot;Jude Bellingham&quot;: { minutes: 111, start: 1, goals: 2 },
+      &quot;Elliot Anderson&quot;: { minutes: 120, start: 1 },
+      &quot;Declan Rice&quot;: { minutes: 45, start: 1 },
+      &quot;Harry Kane&quot;: { minutes: 120, start: 1 },
+      &quot;Anthony Gordon&quot;: { minutes: 71, start: 1, assists: 1 },
+      &quot;Noni Madueke&quot;: { minutes: 45, start: 1 },
+      &quot;Bukayo Saka&quot;: { minutes: 75 },
+      &quot;Eberechi Eze&quot;: { minutes: 75 },
+      &quot;Reece James&quot;: { minutes: 49 },
+      &quot;Djed Spence&quot;: { minutes: 34 },
+      &quot;Morgan Rogers&quot;: { minutes: 31 },
+      &quot;Dan Burn&quot;: { minutes: 9 }
     };
 
     Object.keys(changes).forEach(function (name) {
